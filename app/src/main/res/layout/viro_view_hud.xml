@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/show_hide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hide_show"
+        android:layout_marginTop="570dp"
+        android:visibility="gone"
+        android:layout_marginStart="140dp"
+        />
+
+    <RelativeLayout
+        android:layout_gravity="bottom|end"
+        android:id="@+id/viro_view_hud"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:background="#B3000000">
+
+        <TextView
+            android:textSize="15.5sp"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Searching for surfaces...."/>
+
+    </RelativeLayout>
+</FrameLayout>
