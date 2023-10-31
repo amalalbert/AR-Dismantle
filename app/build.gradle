@@ -1,5 +1,6 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
+//    id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
 
@@ -8,7 +9,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.ar.libraryar"
+//        applicationId "com.ar.libraryar"
         minSdk 24
         targetSdk 32
         versionCode 1
@@ -38,8 +39,23 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation fileTree(dir: 'D:\\libraryAr\\app\\libs', include: ['*.aar', '*.jar'], exclude: [])
+//    implementation fileTree(dir: 'D:\\libraryAr\\app\\libs', include: ['*.aar', '*.jar'], exclude: [])
+//    implementation fileTree(dir: 'D:\\libraryAr\\app\\libs', include: ['*.aar', '*.jar'], exclude: [])
+//    implementation fileTree(include: ['*.aar', '*.jar'], exclude: [],dir: 'libs')
+    compileOnly files('libs/core-1.26.0.aar')
+    compileOnly files('libs/sdk-common-1.130.0.aar')
+//    compileOnly files('libs/viroar-release.aar')
+    compileOnly files('libs/virocore-release.aar')
+//    api(name:'sdk-common-1.130.0',ext:'aar')
+//    api(name:'viroar-release',ext:'aar')
+//    api(name:'virocore-release',ext:'aar')
+//    implementation('com.github.ViroCommunity.virocore:rc-1.20.2')
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation ('io.socket:socket.io-client:2.1.0') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
 }
+
