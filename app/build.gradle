@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace 'com.ar.libraryar'
-    compileSdk 32
+    compileSdk 34
 
     defaultConfig {
 //        applicationId "com.ar.libraryar"
         minSdk 24
-        targetSdk 32
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -22,6 +22,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
     compileOptions {
@@ -44,7 +45,6 @@ dependencies {
 //    implementation fileTree(include: ['*.aar', '*.jar'], exclude: [],dir: 'libs')
     compileOnly files('libs/core-1.26.0.aar')
     compileOnly files('libs/sdk-common-1.130.0.aar')
-//    compileOnly files('libs/viroar-release.aar')
     compileOnly files('libs/virocore-release.aar')
 //    api(name:'sdk-common-1.130.0',ext:'aar')
 //    api(name:'viroar-release',ext:'aar')
